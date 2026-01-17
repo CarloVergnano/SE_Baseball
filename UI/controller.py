@@ -9,7 +9,7 @@ class Controller:
 
     def handle_crea_grafo(self, e):
         """ Handler per gestire creazione del grafo """""
-        # TODO
+        
 
     def handle_dettagli(self, e):
         """ Handler per gestire i dettagli """""
