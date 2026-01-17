@@ -10,10 +10,8 @@ class Team:
 
 
     def __str__(self):
-        return f"Team(id={self.id})"
+        return f"Team({self.id}, {self.year}, {self.name}, {self.team_code}, {self.ingaggi})"
 
-    def __repr__(self):
-        return f"Team(id={self.id})"
 
     def __hash__(self):
         return hash(self.id)

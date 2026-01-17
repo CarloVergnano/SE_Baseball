@@ -32,8 +32,8 @@ class View:
         # TODO
 
         # Riga 1
-        self.dd_anno = ft.Dropdown(label="Anno", width=200, alignment=ft.alignment.top_left)
-
+        self.dd_anno = ft.Dropdown(label="Anno", width=200, alignment=ft.alignment.top_left, on_change=self.controller.on_anno_change)
+        self.controller.popola_dropdown_anni()
         row1 = ft.Row([ft.Container(self.txt_titolo, width=500),
                                ft.Container(None, width=0),
                                ft.Container(self.dd_anno, width=250)],
@@ -49,7 +49,8 @@ class View:
                       vertical_alignment=ft.CrossAxisAlignment.END)
 
         # Riga 3
-        self.dd_squadra = ft.Dropdown(label="Squadra", width=200)
+        self.dd_squadra = ft.Dropdown(label="Squadra", width=200, on_change=self.controller.on_squadra_change)
+
         self.pulsante_dettagli = ft.ElevatedButton(text="Dettagli", on_click=self.controller.handle_dettagli)
         self.pulsante_percorso = ft.ElevatedButton(text="Percorso", on_click=self.controller.handle_percorso)
         row3 = ft.Row([ft.Container(self.dd_squadra, width=250),

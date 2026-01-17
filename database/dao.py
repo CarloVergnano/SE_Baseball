@@ -19,7 +19,7 @@ class DAO:
         cursor.close()
         conn.close()
         return result
-
+    @staticmethod
     def get_teams(anno):
         cnx = DBConnect.get_connection()
         result = []
@@ -40,7 +40,7 @@ class DAO:
             for row in cursor:
                 team = Team(
                     id=row["id"],
-                    year=row["`year`"],
+                    year=row["year"],
                     name=row["name"],
                     team_code = row["team_code"],
                     ingaggi = row["ingaggi"]
